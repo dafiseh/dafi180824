@@ -1,0 +1,112 @@
+body {
+  background: #2b001f;
+  height: 100%;
+  margin: 0;
+}
+
+h2 {
+    color: #ffffff;
+    font-family: monospace;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    text-shadow: 1px 1px #cf2f62;
+}
+.birthday-card {
+  position: relative;
+  width: 200px;
+  height: 283px;
+  border: 10px solid #cf2f62;
+  margin:22% auto;
+  -webkit-box-shadow: inset 10px 0px 15px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 10px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 0, 162, 0.203)), to(rgba(247, 6, 255, 0.5))), url("inner.jpg");
+  background-image: linear-gradient(to bottom, rgba(255, 0, 191, 0.508), rgba(255, 1, 166, 0.223)), url("inner.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.birthday-card .text {
+  width: 100%;
+  height: 53%;
+  margin: auto;
+  font-family: 'Nobile', sans-serif;
+}
+
+.birthday-card .text > p {
+  font-size: 0.73em;
+  color: #ffffff;
+  list-style: 1.4;
+  font-style: italic;
+  text-align: center;
+  margin: 20px auto 0 auto;
+  text-shadow:1px 1px #000 ;
+}
+
+.birthday-card .text .title {
+  font-size: 1em;
+}
+
+.birthday-card .cover-outer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: -10px 0 0 -10px;
+  border: 10px solid #cf2f62;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+  -webkit-transform: perspective(800px) rotateY(0deg);
+          transform: perspective(800px) rotateY(0deg);
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+}
+
+.birthday-card .cover-outer img {
+  -webkit-box-shadow: 0px 6px 11px 7px rgba(0, 0, 0, 0.22);
+          box-shadow: 0px 6px 11px 7px rgba(0, 0, 0, 0.22);
+  border-radius: 5px;
+}
+
+.birthday-card .cover-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 7px solid #cf2f62;
+  background-color: #cf2f62;
+  margin: -7px 0px 0 -7px;
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible;
+  -webkit-filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+  -webkit-transform: perspective(800px) rotateY(0deg);
+          transform: perspective(800px) rotateY(0deg);
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+  overflow: hidden;
+}
+
+.birthday-card .cover-inner img {
+  -webkit-transform: rotateY(170deg);
+          transform: rotateY(170deg);
+}
+
+.birthday-card:hover .cover-outer {
+  -webkit-transform: perspective(800px) rotateY(-170deg);
+          transform: perspective(800px) rotateY(-170deg);
+}
+
+.birthday-card:hover .cover-inner {
+  -webkit-transform: perspective(800px) rotateY(-170deg);
+          transform: perspective(800px) rotateY(-170deg);
+  -webkit-box-shadow: 7px 0 5px 0 rgba(0, 0, 0, 0.3), inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 7px 0 5px 0 rgba(0, 0, 0, 0.3), inset 2px 0px 15px 0px rgba(0, 0, 0, 0.1);
+}
